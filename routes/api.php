@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\BookController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +21,9 @@ use Illuminate\Support\Facades\Route;
   //  return $request->user();
 //});
 
-Route::get('halo', function(){
-    return ["me" => "asipp hehe aja"];
-});
+//Route::get('halo', function(){
+ //   return ["me" => "asipp hehe aja"];
+//});
+//Route::get('cuy', [SiswaController::class, 'index']);
+Route::apiResource('Siswa', SiswaController::class);
+Route::apiResource('books', BookController::class);
